@@ -3,7 +3,8 @@
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="position">
-	<select id="Allposition" resultType="java.lang.String">
-		select pname from position group by pname
+	<select id="Allposition" resultType ="java.lang.String">
+		select pname from position order by pname
 	</select>
+	<!-- select * from position where pname like #{pname} order by pid asc -->
 </mapper>
