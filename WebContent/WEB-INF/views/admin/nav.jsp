@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <ul class="nav justify-content-end">
 	<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-	<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-	<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+	<li class="nav-item"><a class="nav-link" href="${pageContext.servletContext.contextPath }/admin/employee/index.do"">HOME</a></li>
+	<li class="nav-item"><a class="nav-link" href="${pageContext.servletContext.contextPath }/admin/employee/add.do">사원등록</a></li>
 	<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
 </ul>

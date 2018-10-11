@@ -11,7 +11,7 @@
           select employee_seq.nextval from dual 
      </select> 
      
-     <select id="loginck" resultMap="java.util.HashMap" parameterType="java.util.HashMap">
+     <select id="loginck" resultType="java.util.HashMap" parameterType="java.util.HashMap">
      	select * from employee where id = #{id} and pass = #{pass}
      </select>
 </mapper>
