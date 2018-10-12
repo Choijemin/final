@@ -25,26 +25,25 @@
 			src="${pageContext.servletContext.contextPath }/image/logo.PNG"
 			alt="" width="150" height="130">
 		<h1 class="h3 mb-3 font-weight-normal">GROUP WARE</h1>
-		<label for="inputEmail" class="sr-only">사원 아이디</label> <input
-			type="id" id="inputEmail" class="form-control"
-			placeholder="사원 아이디" required autofocus name="id"> <label
-			for="inputPassword" class="sr-only">사원 비밀번호</label> <input
+		<p style="font-size: small;">
+			해당 사용자 계정의 비밀번호를 변경합니다.<br/>
+		</p>
+		<label for="inputEmail" class="sr-only">기존 비밀번호</label> <input
 			type="password" id="inputPassword" class="form-control"
-			placeholder="사원 비밀번호" required name="pass">
-		
-		<c:if test="${!empty err }">
-			<div class="alert alert-danger" role="alert">
-				정보를 잘못 입력하셨습니다.
-			</div>
-		</c:if>
-		
-		<div class="checkbox mb-3">
-			<label> <input type="checkbox" value="remember-me">
-				로그인 유지
-			</label>
-		</div>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">로
-			그 인</button>
+			placeholder="기존 비밀번호" required autofocus name="pass"> 
+			<br>
+		<label for="inputPassword" class="sr-only">새 비밀번호</label> 
+		<input
+			type="password" id="inputPassword" class="form-control"
+			placeholder="사원 비밀번호" required name="newpass">
+			<br>
+		<label for="inputPassword" class="sr-only">비밀번호 재확인(*)</label> 
+		<input
+			type="password" id="inputPassword" class="form-control"
+			placeholder="비밀번호 재확인" required>
+		<br>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			비밀번호 변경</button>
 		<p class="mt-5 mb-3 text-muted">&copy; 2018 MOCKING CORP</p>
 	</form>
 </body>

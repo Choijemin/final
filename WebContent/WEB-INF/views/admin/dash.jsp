@@ -13,4 +13,18 @@
 			<span data-feather="calendar"></span> This week
 		</button>
 	</div>
+
+</div>
+
+<div class="table-responsive">
+	<table class="table table-striped table-sm">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>안녕하시고</th>
+				<th>부서</th>
+				<th>직책</th>
+			</tr>
+		</thead>
+	</table>
 </div>

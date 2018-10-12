@@ -43,8 +43,11 @@
 		<constructor-arg name="sqlSessionFactory"
 			ref="sqlSessionFactory" />
 	</bean>
-	<!-- <bean id = "socket" class="app.controller.admin.SocketController"/>
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" /><!-- 요것도 써줘야 된다. -->
 	<websocket:handlers>
-		<websocket:mapping handler="socket" path="/conn.do"/>
-	</websocket:handlers> -->
+		<websocket:mapping handler="socketController" path="/alert.do"/>
+		<websocket:handshake-interceptors>
+			<bean class = "org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"/>
+		</websocket:handshake-interceptors>
+	</websocket:handlers> 
 </beans>
