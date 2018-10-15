@@ -18,7 +18,6 @@ public class EmplyoeeDao {
 	public List<Map> Alldepart() {
 		return template.selectList("department.Alldepart");
 	}
-	
 	// 직책
 	public List<Map> Allposition() {
 		return template.selectList("position.Allposition");
@@ -34,6 +33,14 @@ public class EmplyoeeDao {
 	// 로그인
 	public Map loginck(Map map) {
 		return template.selectOne("employee.loginck",map);
+	}
+	// 비밀번호 변경
+	public int setchange(Map map) {
+		return template.update("employee.setchange",map);
+	}
+	// 메세지 
+	public int addmail(Map map) {
+		return template.insert("mail.addmail",map);
 	}
 	
 	public Map getEmployee(String id) {

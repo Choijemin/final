@@ -45,7 +45,8 @@
 	</bean>
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" /><!-- 요것도 써줘야 된다. -->
 	<websocket:handlers>
-		<websocket:mapping handler="socketController" path="/alert.do"/>
+		<websocket:mapping handler="alertSocketController" path="/alert.do"/>
+		<websocket:mapping handler="chatSocketController" path="/chat.do"/>
 		<websocket:handshake-interceptors>
 			<bean class = "org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"/>
 		</websocket:handshake-interceptors>

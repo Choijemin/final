@@ -3,12 +3,31 @@
 <tiles-definitions>
 	<definition name = "admin.employee.add" template="/WEB-INF/tiles/admin-template.jsp">
 		<put-attribute name="nav" value = "/WEB-INF/views/admin/nav.jsp"/>
-		<put-attribute name="left" value = "/WEB-INF/views/admin/side.jsp"/>
+		<put-attribute name="left" value = "/WEB-INF/views/admin/sida.jsp"/>
 		<put-attribute name="center" value = "/WEB-INF/views/admin/addEmployee.jsp"/>
 	</definition>
+	
 	<definition name = "admin.employee.home" template="/WEB-INF/tiles/home-template.jsp">
 		<put-attribute name="nav" value = "/WEB-INF/views/admin/nav.jsp"/>
 		<put-attribute name="left" value = "/WEB-INF/views/admin/sida.jsp"/>
 		<put-attribute name="center" value = "/WEB-INF/views/admin/dash.jsp"/>
+	</definition>
+	
+	<definition name = "change.employee.home" template="/WEB-INF/tiles/change-template.jsp">
+		<put-attribute name="nav" value = "/WEB-INF/views/admin/nav.jsp"/>
+		<put-attribute name="left" value = "/WEB-INF/views/admin/sida.jsp"/>
+		<put-attribute name="center" value = "/WEB-INF/views/admin/dashch.jsp"/>
+	</definition>
+	
+	<definition name = "send.employee.home" template="/WEB-INF/tiles/send-template.jsp">
+		<put-attribute name="nav" value = "/WEB-INF/views/admin/nav.jsp"/>
+		<put-attribute name="left" value = "/WEB-INF/views/admin/sida.jsp"/>
+		<put-attribute name="center" value = "/WEB-INF/views/admin/dashsd.jsp"/>
+	</definition>
+	
+	<definition name = "chat.employee.home" template="/WEB-INF/tiles/chat-template.jsp">
+		<put-attribute name="nav" value = "/WEB-INF/views/admin/nav.jsp"/>
+		<put-attribute name="left" value = "/WEB-INF/views/admin/sida.jsp"/>
+		<put-attribute name="center" value = "/WEB-INF/views/chat/dashcet.jsp"/>
 	</definition>
 </tiles-definitions>

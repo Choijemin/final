@@ -24,4 +24,8 @@
 	<select id="checkEmployee" parameterType="java.util.HashMap" resultType="java.lang.Integer">
 		select count(*) from employee where id=#{id } and pass=#{pass}
 	</select>	
+	
+	<update id="setchange" parameterType="java.util.HashMap">
+		update employee set pass = #{pass} where id = #{id}
+	</update>
 </mapper>

@@ -40,6 +40,7 @@ public class IndexController {
 		if (web.getAttribute("auth", web.SCOPE_SESSION) == null) {
 			return "index";
 		} else {
+			
 			return "admin.employee.home";
 
 		}
@@ -65,7 +66,8 @@ public class IndexController {
 				sessions.get(id).invalidate();
 				Map mg = new HashMap<>();
 				mg.put("mode", "overlap");
-				socketService.sendAll(mg);
+				/*socketService.sendAll(mg);*/
+				socketService.sendOne(mg, id);
 			}
 			sessions.put(id, session);
 			
@@ -73,6 +75,7 @@ public class IndexController {
 			Map one = Emplyoee.getEmployee(id);
 			wr.setAttribute("auth", true, wr.SCOPE_SESSION);
 			wr.setAttribute("id", id, wr.SCOPE_SESSION);
+			wr.setAttribute("pass", pass, wr.SCOPE_SESSION);
 			wr.setAttribute("one", one, wr.SCOPE_SESSION);
 			
 			Map msg = new HashMap<>();
@@ -80,8 +83,9 @@ public class IndexController {
 			msg.put("actor", one);
 			socketService.sendAll(msg);// 모든 사용자에게 요걸 보내달라
 			/*socketService.sendOne(msg, "em1046");*/
+			
 			System.out.println(one);
-
+			
 			return "redirect:/";
 		} else {
 			map.put("err", "on");
